@@ -2,7 +2,7 @@ var socket;
 var newPlayer = true;
 
 function setup() {
-  createCanvas(500,500);
+  createCanvas(window.innerWidth,window.innerHeight);
   frameRate(144);
   background(51);
 
@@ -14,7 +14,7 @@ function setup() {
 function syncDrawing(datas){
   if (newPlayer === true) {
     for (broj in datas) {
-      stroke(255);
+      stroke(200);
       strokeWeight(20)
       line(datas[broj].x, datas[broj].y, datas[broj].px, datas[broj].py);
     }
@@ -23,7 +23,7 @@ function syncDrawing(datas){
 }
 
 function newDrawing(data) {
-  stroke(255);
+  stroke(200);
   strokeWeight(20)
   line(data.x, data.y, data.px, data.py);
 }
